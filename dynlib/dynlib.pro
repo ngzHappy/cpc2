@@ -12,3 +12,5 @@ SOURCES += Dynlib.cpp
 HEADERS += Dynlib.hpp\
         dynlib_global.hpp
 
+include($$PWD/../CppBoostTest.pri)
+DESTDIR=$$OUTPUTDIR_

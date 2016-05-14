@@ -12,3 +12,7 @@ SOURCES += main.cpp\
 HEADERS  += MainWindow.hpp
 
 FORMS    += MainWindow.ui
+
+include($$PWD/../CppBoostTest.pri)
+DESTDIR=$$OUTPUTDIR_
+LIBS +=-L$$OUTPUTDIR_ -ldynlib

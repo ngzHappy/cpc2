@@ -94,6 +94,7 @@ struct buffer_overlay_visitor
 public :
     void print(char const* header)
     {
+        (void)header;
     }
 
     template <typename Turns>

@@ -5,4 +5,4 @@ DEFINES*=BOOST_REGEX_SOURCE
 DEFINES*=BOOST_SYSTEM_SOURCE
 
 include($$PWD/boost_dyn.pri)
-include($$PWD/boost.pri)
+include($$PWD/boost_source.pri)
