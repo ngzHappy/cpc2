@@ -51,8 +51,21 @@
 #include <stddef.h>
 
 #ifndef GUMBO_EXPORT_IMPORT
+
+#if defined(GUMBO_BUILD_AS_DLL)
+
+#include "../boost/boost/config.hpp"
+#if defined(GUMBO_SOURCE_BUILD_AS_DLL)
+#define GUMBO_EXPORT_IMPORT BOOST_SYMBOL_EXPORT
+#else
+#define GUMBO_EXPORT_IMPORT BOOST_SYMBOL_IMPORT
+#endif
+
+#else
 #define GUMBO_EXPORT_IMPORT extern
 #endif
+
+#endif/*~GUMBO_EXPORT_IMPORT*/
 
 #ifdef __cplusplus
 extern "C" {

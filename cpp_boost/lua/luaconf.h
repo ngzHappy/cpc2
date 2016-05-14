@@ -177,14 +177,14 @@
 #define LUA_CDIR	"!\\"
 #define LUA_SHRDIR	"!\\..\\share\\lua\\" LUA_VDIR "\\"
 #define LUA_PATH_DEFAULT  \
-		LUA_LDIR"?.lua;"  LUA_LDIR"?\\init.lua;" \
-		LUA_CDIR"?.lua;"  LUA_CDIR"?\\init.lua;" \
-		LUA_SHRDIR"?.lua;" LUA_SHRDIR"?\\init.lua;" \
-		".\\?.lua;" ".\\?\\init.lua"
+        LUA_LDIR"?.lua;"  LUA_LDIR"?\\init.lua;" \
+        LUA_CDIR"?.lua;"  LUA_CDIR"?\\init.lua;" \
+        LUA_SHRDIR"?.lua;" LUA_SHRDIR"?\\init.lua;" \
+        ".\\?.lua;" ".\\?\\init.lua"
 #define LUA_CPATH_DEFAULT \
-		LUA_CDIR"?.dll;" \
-		LUA_CDIR"..\\lib\\lua\\" LUA_VDIR "\\?.dll;" \
-		LUA_CDIR"loadall.dll;" ".\\?.dll"
+        LUA_CDIR"?.dll;" \
+        LUA_CDIR"..\\lib\\lua\\" LUA_VDIR "\\?.dll;" \
+        LUA_CDIR"loadall.dll;" ".\\?.dll"
 
 #else			/* }{ */
 
@@ -192,11 +192,11 @@
 #define LUA_LDIR	LUA_ROOT "share/lua/" LUA_VDIR "/"
 #define LUA_CDIR	LUA_ROOT "lib/lua/" LUA_VDIR "/"
 #define LUA_PATH_DEFAULT  \
-		LUA_LDIR"?.lua;"  LUA_LDIR"?/init.lua;" \
-		LUA_CDIR"?.lua;"  LUA_CDIR"?/init.lua;" \
-		"./?.lua;" "./?/init.lua"
+        LUA_LDIR"?.lua;"  LUA_LDIR"?/init.lua;" \
+        LUA_CDIR"?.lua;"  LUA_CDIR"?/init.lua;" \
+        "./?.lua;" "./?/init.lua"
 #define LUA_CPATH_DEFAULT \
-		LUA_CDIR"?.so;" LUA_CDIR"loadall.so;" "./?.so"
+        LUA_CDIR"?.so;" LUA_CDIR"loadall.so;" "./?.so"
 #endif			/* } */
 
 
@@ -231,10 +231,12 @@
 */
 #if defined(LUA_BUILD_AS_DLL)	/* { */
 
+#include "../boost/boost/config.hpp"
+
 #if defined(LUA_CORE) || defined(LUA_LIB)	/* { */
-#define LUA_API __declspec(dllexport)
+#define LUA_API BOOST_SYMBOL_EXPORT
 #else						/* }{ */
-#define LUA_API __declspec(dllimport)
+#define LUA_API BOOST_SYMBOL_IMPORT
 #endif						/* } */
 
 #else				/* }{ */
@@ -339,9 +341,9 @@
 ** You can call your C function directly (with light C functions).
 */
 #define lua_cpcall(L,f,u)  \
-	(lua_pushcfunction(L, (f)), \
-	 lua_pushlightuserdata(L,(u)), \
-	 lua_pcall(L,1,0,0))
+    (lua_pushcfunction(L, (f)), \
+     lua_pushlightuserdata(L,(u)), \
+     lua_pcall(L,1,0,0))
 
 
 /*
@@ -606,7 +608,7 @@
 
 
 /*
-@@ lua_number2strx converts a float to an hexadecimal numeric string. 
+@@ lua_number2strx converts a float to an hexadecimal numeric string.
 ** In C99, 'sprintf' (with format specifiers '%a'/'%A') does that.
 ** Otherwise, you can leave 'lua_number2strx' undefined and Lua will
 ** provide its own implementation.
