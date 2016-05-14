@@ -21,8 +21,8 @@
 #include <boost/geometry/algorithms/detail/ring_identifier.hpp>
 #include <boost/geometry/algorithms/detail/overlay/segment_identifier.hpp>
 
-#if defined(BOOST_GEOMETRY_DEBUG_HANDLE_COLOCATIONS)
 #  include <iostream>
+#if defined(BOOST_GEOMETRY_DEBUG_HANDLE_COLOCATIONS)
 #  include <boost/geometry/algorithms/detail/overlay/debug_turn_info.hpp>
 #  include <boost/geometry/io/wkt/wkt.hpp>
 #  define BOOST_GEOMETRY_DEBUG_IDENTIFIER

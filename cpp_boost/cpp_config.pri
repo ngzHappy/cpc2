@@ -1,7 +1,7 @@
 
 CONFIG += c++14
 !win32-msvc*{
-QMAKE_CFLAGS*=-std=c99
+QMAKE_CFLAGS*=-std=c11
 }else{
 DEFINES *=_CRT_SECURE_NO_DEPRECATE
 }
