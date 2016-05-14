@@ -41,7 +41,9 @@ SOURCES += \
     $$PWD/lua_lzio.cpp
 
 HEADERS += \
-    $$PWD/lua.hpp \
+    $$PWD/lua.hpp
+
+DISTFILES += \
     $$PWD/lapi.h \
     $$PWD/lauxlib.h \
     $$PWD/lcode.h \
@@ -66,6 +68,11 @@ HEADERS += \
     $$PWD/lualib.h \
     $$PWD/lundump.h \
     $$PWD/lvm.h \
-    $$PWD/lzio.h
+    $$PWD/lzio.h \
+    $$PWD/main_lua_lua.cpp \
+    $$PWD/main_lua_luac.cpp
+
+
+
 
 
