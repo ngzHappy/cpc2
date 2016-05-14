@@ -7,7 +7,7 @@
 
 //  Library home page: http://www.boost.org/libs/filesystem
 
-//--------------------------------------------------------------------------------------// 
+//--------------------------------------------------------------------------------------//
 
 // define BOOST_FILESYSTEM_SOURCE so that <boost/filesystem/config.hpp> knows
 // the library is being built (possibly exporting rather than importing code)
@@ -19,9 +19,9 @@
 #pragma warning(disable:4267)
 #endif
 
- 
 
-#ifndef BOOST_SYSTEM_NO_DEPRECATED 
+
+#ifndef BOOST_SYSTEM_NO_DEPRECATED
 # define BOOST_SYSTEM_NO_DEPRECATED
 #endif
 
@@ -36,7 +36,7 @@
 # else // BOOST_WINDOWS_API
 #   include <windows.h>
 #   include <wincrypt.h>
-#   pragma comment(lib, "Advapi32.lib")
+//#   pragma comment(lib, "Advapi32.lib")
 # endif
 
 namespace {
