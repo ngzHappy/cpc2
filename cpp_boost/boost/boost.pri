@@ -63,6 +63,9 @@ SOURCES += \
     $$PWD/libs/boost_windows_file_codecvt.cpp \
     $$PWD/libs/boost_winstances.cpp
 
+HEADERS += \
+    $$PWD/PartBoost.hpp
+
 
 
 
