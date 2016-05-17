@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
-CONFIG -= ordered
+CONFIG += ordered
 
 #.subdir #Use the specified subdirectory instead of SUBDIRS value.
 #.file #Specify the subproject pro file explicitly. Cannot be used in conjunction with .subdir modifier.
@@ -7,7 +7,9 @@ CONFIG -= ordered
 #.makefile #The makefile of subproject. Available only on platforms that use makefiles.
 #.target #Base string used for makefile targets related to this subproject. Available only on platforms that use makefiles.
 SUBDIRS += static_test \
+    dynlib \
     dyn_test \
-    dynlib
+    cplusplus_core
+
 
 
