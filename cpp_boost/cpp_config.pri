@@ -19,5 +19,8 @@ DEFINES *= _DEBUG
 DEFINES *= NDEBUG
 }
 
+HEADERS += \
+    $$PWD/cplusplus_global.hpp
+
 
 
