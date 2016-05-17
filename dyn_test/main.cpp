@@ -1,4 +1,4 @@
-#include "MainWindow.hpp"
+﻿#include "MainWindow.hpp"
 #include <QApplication>
 
 #include <PartBoost.hpp>
@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    
+
     {
         boost::asio::io_service s;
         s.run_one();
