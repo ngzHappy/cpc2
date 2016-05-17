@@ -3,10 +3,6 @@
 
 namespace std{}
 namespace boost{}
-namespace zns{
-using namespace std;
-using namespace boost;
-}
 
 /*C++ 11or14*/
 #include <array>
@@ -20,11 +16,21 @@ using namespace boost;
 #include <exception>
 #include <stdexcept>
 #include <algorithm>
+#include <functional>
 #include <type_traits>
 /*C++17*/
 #include <boost/optional.hpp>
 
-#endif
+namespace zns{
+using namespace std;
+using namespace boost;
+template<typename ... _T_>using tuple=std::tuple<_T_...>;
+template<typename ... _T_>using function=std::function<_T_...>;
+template<typename ... _T_>using shared_ptr=std::shared_ptr<_T_...>;
+template<typename ... _T_>using weak_ptr=std::weak_ptr<_T_...>;
+template<typename ... _T_>using enable_shared_from_this=std::enable_shared_from_this<_T_...>;
+}
 
+#endif
 
 
