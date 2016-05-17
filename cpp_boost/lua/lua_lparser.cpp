@@ -5,7 +5,10 @@
 */
 
 #define lparser_c
+#ifndef LUA_CORE
 #define LUA_CORE
+#endif/**/
+
 
 #include "lprefix.h"
 

@@ -5,7 +5,10 @@
 */
 
 #define luac_c
+#ifndef LUA_CORE
 #define LUA_CORE
+#endif/**/
+
 
 #include "lprefix.h"
 
@@ -215,7 +218,10 @@ int main(int argc, char* argv[])
 #include <stdio.h>
 
 #define luac_c
+#ifndef LUA_CORE
 #define LUA_CORE
+#endif/**/
+
 
 #include "ldebug.h"
 #include "lobject.h"

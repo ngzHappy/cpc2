@@ -5,7 +5,10 @@
 */
 
 #define lauxlib_c
+#ifndef LUA_LIB
 #define LUA_LIB
+#endif/**/
+
 
 #include "lprefix.h"
 
