@@ -79,8 +79,9 @@ template<typename ..._T_>using spf=__shared_ptr_function<_T_...>;
 
 #endif
 /*
+git submodule add https://github.com/ngzHappy/cpc2 cplusplus
 git submodule foreach --recursive git submodule init
-git submodule foreach --recursive git submodule update
 git submodule foreach git pull
+git submodule foreach --recursive git submodule update
 */
 
