@@ -83,5 +83,6 @@ git submodule add https://github.com/ngzHappy/cpc2 cplusplus
 git submodule foreach --recursive git submodule init
 git submodule foreach git pull
 git submodule foreach --recursive git submodule update
+git
 */
 
