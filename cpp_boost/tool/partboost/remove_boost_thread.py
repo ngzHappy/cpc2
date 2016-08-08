@@ -18,6 +18,10 @@ def user_configure_change(boostDirName):
 #define BOOST_SP_USE_STD_ATOMIC
 #endif
 
+#ifndef BOOST_AC_USE_STD_ATOMIC
+#define BOOST_AC_USE_STD_ATOMIC
+#endif 
+
 #ifndef BOOST_ALL_NO_LIB
 #define BOOST_ALL_NO_LIB
 #endif
@@ -46,7 +50,7 @@ namespace boost
 namespace detail
 {
 
-class lightweight_mutex :std::recursive_mutex{
+class lightweight_mutex :public std::recursive_mutex{
 typedef std::recursive_mutex parent_type;
 public:
 using parent_type::parent_type;
